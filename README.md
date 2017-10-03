@@ -18,7 +18,6 @@ For example, to write "ABCD", send:
 See comm.py for a simple helper.
 
 ## Fonts
-
 The display automatically centers the text and chooses the largest font for a given message. If the message doesn't fit even in the smallest font, it is ignored and the display is cleared.
 
 ![Big font](doc/font_big.png)
@@ -28,6 +27,8 @@ The display automatically centers the text and chooses the largest font for a gi
 The fonts aren't monospaced :)
 
 ## Control board
+My board has a rotary code wheel with 16 positions to address multiple displays on the same bus. It is completely ignored by this firmware.
+
 The control board uses a Rockwell 6511Q, which is a 6502-based CPU with additionnal instructions and a few mcu-like peripherals.
 
 Memory map:
