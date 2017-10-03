@@ -4,7 +4,7 @@ Firmware disassembly of a Hanover Displays 84x7 flip-dot display
 This display (unknown model code) doesn't use the pixel-by-pixel protocol described in other places. This one is greatly simplified and only allows to use a limited set of ASCII characters.
 
 Drawing custom graphics would require a fontset hack:
-![Flip dot dick display](dicktest.jpg)
+![Flip dot dick display](doc/dicktest.jpg)
 
 ## Protocol
 RS-485 4800bps TX only, 8 data bits, odd parity, 1 stop bit.
@@ -21,9 +21,11 @@ See comm.py for a simple helper.
 
 The display automatically centers the text and chooses the largest font for a given message. If the message doesn't fit even in the smallest font, it is ignored and the display is cleared.
 
-![Big font](font_big.png)
-![Medium font](font_med.png)
-![Small font](font_small.png)
+![Big font](doc/font_big.png)
+![Medium font](doc/font_med.png)
+![Small font](doc/font_small.png)
+
+The fonts aren't monospaced :)
 
 ## Control board
 The control board uses a Rockwell 6511Q, which is a 6502-based CPU with additionnal instructions and a few mcu-like peripherals.
